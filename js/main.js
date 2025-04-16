@@ -100,7 +100,7 @@ function checkLoginAndAddToCart(name, price, imageUrl) {
     addToCart(name, price, imageUrl);
   } else {
     alert("Bạn cần đăng nhập để thêm sản phẩm vào giỏ hàng!");
-    window.location.href = "login.html"; 
+    window.location.href = "login.html"; // Ensure navigation works
   }
 }
 
