@@ -100,8 +100,14 @@
             </div>
 
             <script>
-                displayCart(); // Gọi hàm để hiển thị sản phẩm khi trang được tải
-                updateCartCount(); // Cập nhật số lượng sản phẩm khi trang được tải
+                const isLoggedIn = localStorage.getItem("isLoggedIn");
+                if (isLoggedIn !== "true") {
+                    alert("Bạn cần đăng nhập để xem giỏ hàng!");
+                    window.location.href = "login.html"; // Redirect to login page
+                } else {
+                    displayCart(); // Gọi hàm để hiển thị sản phẩm khi trang được tải
+                    updateCartCount(); // Cập nhật số lượng sản phẩm khi trang được tải
+                }
             </script>
 
         </div>

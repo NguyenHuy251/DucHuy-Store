@@ -96,11 +96,5 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-function checkAdmin() {
-    const userName = localStorage.getItem("userName");
-    if (userName === "admin") {
-        document.getElementById("admin-actions").style.display = "block";
-        alert("Bạn đang đăng nhập với tư cách là quản trị viên");
-    }
-}
+
 
