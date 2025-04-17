@@ -82,13 +82,17 @@
             <div class="form-signup">
                 <h2>Đăng Ký</h2>
                 <form method="get" action="login.html">
-                    <input id="registerUser" type="text" required minlength="3" maxlength="50" placeholder="Tên đăng nhập" />
-                    <input id="registerDisplayName" type="text" required minlength="3" maxlength="50" placeholder="Tên hiển thị" />
-                    <input id="registerPass" type="password" required minlength="10" maxlength="200" placeholder="Mật khẩu" />
-                    <input id="registerEmail" type="email" required minlength="3" maxlength="50" placeholder="Email" />
+                    <label>Tên đăng nhập<span > *</span>:</label>
+                    <input id="registerUser" type="text" required minlength="3" maxlength="50" placeholder="UserName" />
+                    <label>Tên hiển thị<span > *</span>:</label>
+                    <input id="registerDisplayName" type="text" required minlength="3" maxlength="50" placeholder="DisplayName" />
+                    <label>Mật khẩu<span > *</span>:</label>
+                    <input id="registerPass" type="password" required pattern="^[A-Z](?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{5,}$" minlength="10" maxlength="200" placeholder="Password" />
+                    <label>Email<span > *</span>:</label>
+                    <input id="registerEmail" type="email" required minlength="3" maxlength="50" placeholder="example@gmail.com" />
                     <input onclick="registerAccount()" type="submit" value="Đăng ký" />
                     <div class="links">
-                        <span>Bạn đã có tài khoản? </span><a href="login.html">Đăng nhập</a>
+                        <strong>Bạn đã có tài khoản?</strong> <a style="font-weight: bold;" href="login.html">Đăng nhập</a>
                     </div>
                 </form>
             </div>

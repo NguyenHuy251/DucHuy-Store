@@ -3,11 +3,19 @@
     max-width: 400px;
     margin: 50px auto;
     padding: 30px;
-    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
     border-radius: 15px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
+
+label{
+    float: left;
+}
+
+span{
+    color: red;
+}
+
 .form-login h2, .form-signup h2, .form-forgot h2 {
     margin-bottom: 20px;
     color: #333;

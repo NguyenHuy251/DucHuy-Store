@@ -81,8 +81,10 @@
             <div class="form-login">
                 <h2>Đăng Nhập</h2>
                 <form method="get" action="index.html">
-                    <input id="loginUser" type="text" required minlength="3" maxlength="50" placeholder="Tên đăng nhập" />
-                    <input id="loginPass" type="password" required minlength="8" maxlength="200" placeholder="Mật khẩu" />
+                    <label>Tên đăng nhập<span > *</span>:</label>
+                    <input id="loginUser" type="text" required minlength="3" maxlength="50" placeholder="UserName" />
+                    <label>Mật khẩu<span > *</span>:</label>
+                    <input id="loginPass" type="password" required pattern="^[A-Z](?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{5,}$" minlength="8" maxlength="200" placeholder="Password" />
                     <input onclick="login()" type="submit" value="Đăng nhập" />
                     <div class="links">
                         <a href="signup.html">Đăng ký</a> | <a href="forgotpass.html">Quên mật khẩu?</a>

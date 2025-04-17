@@ -61,18 +61,24 @@ function login() {
         alert("Đăng nhập thành công!");
         localStorage.setItem("isLoggedIn", "true");
         localStorage.setItem("displayName", userAccount.displayName);
+        localStorage.setItem("username", username); // Store the username
 
-        if (username === "admin") {
-            window.location.href = "admin.html"; // Redirect to admin page
+        if (username === "duchuy2501") {
+            window.location.href = "admin.html"; 
         } else {
-            window.location.href = "index.html"; // Redirect to home page
+            window.location.href = "index.html"; 
         }
     } else {
         alert("Tên đăng nhập hoặc mật khẩu không đúng.");
     }
 }
-  
 
+function requireLogin() {
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+    if (isLoggedIn !== "true") {
+        document.getElementById("login-form").style.display = "block";
+    }
+}
 
 // Hàm xử lý đăng xuất
 function logout() {
@@ -95,6 +101,15 @@ document.addEventListener("DOMContentLoaded", function() {
         `;
     }
 });
+
+function redirectToHomeOrAdmin() {
+    const username = localStorage.getItem("username");
+    if (username === "duchuy2501") {
+        window.location.href = "admin.html";
+    } else {
+        window.location.href = "index.html";
+    }
+}
 
 
 

@@ -124,7 +124,7 @@ form button:hover {
 }
 
 #adminDashboard {
-    font-family: Arial, sans-serif;
+    margin-top: 10px;
     background: #f4f4f9;
     padding: 20px;
     border-radius: 10px;
