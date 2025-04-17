@@ -691,3 +691,162 @@ input{
 }
 
 
+.shipping-policy {
+    margin: 20px auto;
+    width: 90%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.shipping-policy h2 {
+    color: #333;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.shipping-policy ul {
+    margin-left: 20px;
+}
+.shipping-policy li {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.shipping-policy li i {
+    color: green;
+}
+.shipping-policy p {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #555;
+}
+.shipping-policy p i {
+    color: orange;
+}
+
+.contact-form {
+    margin: 20px auto;
+    width: 90%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.contact-form h2 {
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.contact-form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #555;
+}
+.contact-form label i {
+    margin-right: 5px;
+    color: orange;
+}
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.contact-form button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.contact-form button:hover {
+    background-color: coral;
+    transform: scale(1.1);
+}
+.contact-form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.promo-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px auto;
+    width: 90%;
+    gap: 20px;
+}
+.promo-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 22%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.promo-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+.promo-card i {
+    font-size: 30px;
+    color: orange;
+    margin-bottom: 10px;
+}
+.promo-card h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+.promo-card p {
+    color: #666;
+}
+
+.policy-content {
+    margin: 20px auto;
+    width: 90%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.policy-content h2 {
+    color: #333;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+}
+.policy-content ul, .policy-content ol {
+    list-style: none;
+    margin-left: 20px;
+}
+.policy-content li {
+    margin-bottom: 5px;
+}
+.policy-content p {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #555;
+}
+.policy-content h2 i, .policy-content li i, .policy-content p i {
+    color: orange;
+    margin-right: 10px;
+    font-size: 16px;
+}

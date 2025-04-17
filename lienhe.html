@@ -4,16 +4,15 @@
         <title>DucHuy Store</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="./css/main.css" type="text/css" />
-        <link rel="stylesheet" href="./css/chitiet.css" type="text/css" />
+        <link rel="stylesheet" href="./css/tintuc.css" type="text/css" />
         <link rel="stylesheet" href="./css/multiform.css" type="text/css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
-        <script src="/js/jquery-3.7.1.min.js"></script>
-        <script src="./js/main.js"></script>
-        <script src="./js/chitiet.js"></script>
-        <script src="./js/login.js"></script>
+        <script src="./js/jquery-3.7.1.min.js"></script>
+        <script src="./js/main.js "></script>
+        <script src="./js/login.js "></script>                              
     </head>
 
-    <body onload="loadProductDetails()">
+    <body>
         <div id="header">
             <div id="header-top" >
                 <div id="top-left" >
@@ -80,37 +79,40 @@
                 <marquee ><h3>Chào mừng đến với DucHuy Store! Uy tín & chất lượng luôn được đặt lên hàng đâu!!!</h3></marquee>
             </div>
 
-            <!-- Chi tiết sản phẩm -->
-            <div class="product-page">
-                <div class="product-header">
-                    <h1 id="product-name">Tên Sản Phẩm</h1>
-                    <p class="model">Model: QM-360</p>
-                </div>
-            
-                <div class="product-image">
-                    <img id="product-image" src="" alt="Ảnh Sản Phẩm">
-                </div>
-            
-                <div class="product-details">
-                    <h2>Mô Tả Sản Phẩm</h2>
-                    <p>Chiếc quạt với thiết kế hiện đại, mang đến làn gió mát dịu nhẹ, phù hợp cho mọi không gian có thể giúp ích nhiều vào đời sống.</p>
-                
-                    <h2>Thông Số Kỹ Thuật</h2>
-                    <ul>
-                        <li>Công suất: 50W</li>
-                        <li>Điện áp: 220V/50Hz</li>
-                        <li>Kích thước: 40 x 30 x 75 cm</li>
-                        <li>Trọng lượng: 3.5 kg</li>
-                        <li>Màu sắc: Trắng, đen</li>
-                    </ul>
-                
-                    <div class="product-price">
-                        <p><strong>Giá:</strong> <span id="product-price"></span> VNĐ</p>
-                        <button onclick="checkLoginAndAddToCart(document.getElementById('product-name').innerText, document.getElementById('product-price').innerText, document.getElementById('product-image').src)">Thêm vào giỏ</button>
-                    </div>
+            <div class="nenqc">
+                <i class="fa-solid fa-arrow-left" onclick="back()"></i>
+                <img src="https://m.media-amazon.com/images/I/51H4ikG-1XL._AC_UF894,1000_QL80_.jpg" alt="nền" id="image">
+                <i class="fa-solid fa-arrow-right" onclick="next()"></i>
+            </div>
+
+            <div>
+                <div id="news-title"><span>Thông Tin Liên Hệ</span></div>
+                <hr style="border: 3px solid lightgray; width: 90%; margin-top: 3px">
+                <div class="contact-form">
+                    <h2>Liên hệ với chúng tôi</h2>
+                    <form>
+                        <label for="name"><i class="fa-solid fa-user"></i> Họ và tên:</label>
+                        <input type="text" id="name" name="name" required>
+                        <label for="email"><i class="fa-solid fa-envelope"></i> Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="phone"><i class="fa-solid fa-phone"></i> Số điện thoại:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                        <label for="subject"><i class="fa-solid fa-tag"></i> Chủ đề:</label>
+                        <input type="text" id="subject" name="subject" required>
+                        <label for="message"><i class="fa-solid fa-comment-dots"></i> Nội dung:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <label for="address"><i class="fa-solid fa-location-dot"></i> Địa chỉ:</label>
+                        <input type="text" id="address" name="address" placeholder="Nhập địa chỉ của bạn">
+                        <label for="preferred-contact"><i class="fa-solid fa-handshake"></i> Phương thức liên hệ:</label>
+                        <select id="preferred-contact" name="preferred-contact">
+                            <option value="email">Email</option>
+                            <option value="phone">Điện thoại</option>
+                            <option value="message">Tin nhắn</option>
+                        </select>
+                        <button type="submit"><i class="fa-solid fa-paper-plane"></i> Gửi</button>
+                    </form>
                 </div>
             </div>
-            <!-- Kết thúc chi tiết sản phẩm -->
 
             <div id="chatbot">
                 <button id="chatbot-btn">
@@ -128,6 +130,7 @@
             </div>
 
             <script>
+                autoPlay();
                 updateCartCount(); // Cập nhật số lượng sản phẩm khi trang được tải
             </script>
 
@@ -173,3 +176,4 @@
 
 
 </html>
+
