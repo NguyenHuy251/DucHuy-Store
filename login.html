@@ -84,7 +84,10 @@
                     <label>Tên đăng nhập<span > *</span>:</label>
                     <input id="loginUser" type="text" required minlength="3" maxlength="50" placeholder="UserName" />
                     <label>Mật khẩu<span > *</span>:</label>
-                    <input id="loginPass" type="password" required pattern="^[A-Z](?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{5,}$" minlength="8" maxlength="200" placeholder="Password" />
+                    <div style="position: relative;">
+                        <input id="loginPass" type="password" required pattern="^[A-Z](?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{5,}$" minlength="8" maxlength="200" placeholder="Password" />
+                        <i class="fa-solid fa-eye" id="toggleLoginPass" onclick="togglePasswordVisibility('loginPass', 'toggleLoginPass')"></i>
+                    </div>
                     <input onclick="login()" type="submit" value="Đăng nhập" />
                     <div class="links">
                         <a href="signup.html">Đăng ký</a> | <a href="forgotpass.html">Quên mật khẩu?</a>

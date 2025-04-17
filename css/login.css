@@ -50,6 +50,22 @@ span{
     margin-top: 10px;
 }
 
+#toggleLoginPass{
+    position: absolute; 
+    right: 10px; 
+    top: 65%; 
+    transform: translateY(-50%); 
+    cursor: pointer;
+}
+
+#toggleRegisterPass{
+    position: absolute; 
+    right: 10px; 
+    top: 65%; 
+    transform: translateY(-50%); 
+    cursor: pointer;
+}
+
 /* SignUp */
 .form-signup {
     max-width: 400px;

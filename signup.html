@@ -87,7 +87,10 @@
                     <label>Tên hiển thị<span > *</span>:</label>
                     <input id="registerDisplayName" type="text" required minlength="3" maxlength="50" placeholder="DisplayName" />
                     <label>Mật khẩu<span > *</span>:</label>
-                    <input id="registerPass" type="password" required pattern="^[A-Z](?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{5,}$" minlength="10" maxlength="200" placeholder="Password" />
+                    <div style="position: relative;">
+                        <input id="registerPass" type="password" required pattern="^[A-Z](?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{5,}$" minlength="10" maxlength="200" placeholder="Password" />
+                        <i class="fa-solid fa-eye" id="toggleRegisterPass"  onclick="togglePasswordVisibility('registerPass', 'toggleRegisterPass')"></i>
+                    </div>
                     <label>Email<span > *</span>:</label>
                     <input id="registerEmail" type="email" required minlength="3" maxlength="50" placeholder="example@gmail.com" />
                     <input onclick="registerAccount()" type="submit" value="Đăng ký" />

@@ -11,6 +11,16 @@ function registerAccount() {
         return;
     }
 
+    if (!validatePasswordFormat(password)) {
+        alert("Mật khẩu phải bắt đầu bằng chữ in hoa, chứa ít nhất một số và một ký tự đặc biệt, và có độ dài tối thiểu 8 ký tự.");
+        return;
+    }
+
+    if (!validateEmailFormat(email)) {
+        alert("Email không hợp lệ. Vui lòng nhập đúng định dạng email.");
+        return;
+    }
+
     // Tạo đối tượng tài khoản mới
     const account = {
         username: username,
@@ -48,6 +58,11 @@ function login() {
     // Kiểm tra xem người dùng đã nhập đủ thông tin chưa
     if (username === "" || password === "") {
         alert("Vui lòng điền đầy đủ tên đăng nhập và mật khẩu.");
+        return;
+    }
+
+    if (!validatePasswordFormat(password)) {
+        alert("Mật khẩu phải bắt đầu bằng chữ in hoa, chứa ít nhất một số và một ký tự đặc biệt, và có độ dài tối thiểu 8 ký tự.");
         return;
     }
   
@@ -109,6 +124,30 @@ function redirectToHomeOrAdmin() {
     } else {
         window.location.href = "index.html";
     }
+}
+
+function togglePasswordVisibility(inputId, toggleIconId) {
+    const input = document.getElementById(inputId);
+    const toggleIcon = document.getElementById(toggleIconId);
+    if (input.type === "password") {
+        input.type = "text";
+        toggleIcon.classList.remove("fa-eye");
+        toggleIcon.classList.add("fa-eye-slash");
+    } else {
+        input.type = "password";
+        toggleIcon.classList.remove("fa-eye-slash");
+        toggleIcon.classList.add("fa-eye");
+    }
+}
+
+function validatePasswordFormat(password) {
+    const passwordPattern = /^[A-Z](?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{5,}$/;
+    return passwordPattern.test(password);
+}
+
+function validateEmailFormat(email) {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
 }
 
 
