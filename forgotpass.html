@@ -80,9 +80,9 @@
 
             <div class="form-forgot">
                 <h2>Quên Mật Khẩu</h2>
-                <form>
-                    <label>Email<span > *</span>:</label>
-                    <input type="email" required minlength="3" maxlength="50" placeholder="example@gmail.com" />
+                <form onsubmit="forgotPassword(event)">
+                    <label>Email<span>*</span>:</label>
+                    <input id="forgotEmail" type="email" required minlength="3" maxlength="50" placeholder="example@gmail.com" />
                     <input type="submit" value="Lấy lại mật khẩu" />
                     <div class="links">
                         <a href="login.html">Đăng nhập</a> | <a href="signup.html">Đăng ký</a>

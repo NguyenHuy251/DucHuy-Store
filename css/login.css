@@ -87,14 +87,14 @@ span{
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-.form-signup input[type="submit"] {
+.form-signup input[type="button"] {
     background-color: #007bff;
     color: white;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-.form-signup input[type="submit"]:hover {
+.form-signup input[type="button"]:hover {
     background-color: #0056b3;
 }
 .form-signup a {
